@@ -1,0 +1,128 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 85% 8%, rgb(23 93 70 / 14%), transparent 34%),
+    #071114;
+  color: #f4f8f6;
+}
+
+.shell { width: min(92%, 1280px); margin-inline: auto; }
+
+.topbar {
+  display: flex;
+  min-height: 84px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgb(151 190 183 / 15%);
+}
+
+.brand { display: inline-flex; align-items: center; gap: .55rem; }
+.brand img { display: block; width: 34px; height: 68px; object-fit: contain; }
+.brand span { display: flex; flex-direction: column; align-items: flex-start; gap: .15rem; }
+.brand strong { color: #f5faf7; font-size: 1.28rem; line-height: 1.2; }
+.brand small { color: #86d9b3; direction: ltr; font-size: .55rem; font-weight: 700; letter-spacing: .25em; }
+.backLink,
+.pageEnd a {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  border: 1px solid rgb(132 208 176 / 26%);
+  border-radius: 999px;
+  padding: .6rem .95rem;
+  background: rgb(25 72 56 / 24%);
+  color: #cef1dc;
+  font-size: .83rem;
+  font-weight: 700;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+.backLink:hover,
+.pageEnd a:hover { border-color: rgb(132 208 176 / 55%); background: rgb(25 72 56 / 42%); }
+.backLink span,
+.pageEnd a span { font-size: 1rem; line-height: 1; }
+.backLink:focus-visible,
+.pageEnd a:focus-visible,
+.brand:focus-visible,
+.jumpNav a:focus-visible { outline: 2px solid #8be5bf; outline-offset: 4px; }
+
+.intro { max-width: 940px; padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(2.5rem, 5vw, 4rem); }
+.eyebrow { margin: 0 0 .7rem; color: #83dcb6; font-size: 1rem; font-weight: 800; }
+.intro h1 { margin: 0; font-size: clamp(2.1rem, 4vw, 3.6rem); font-weight: 800; line-height: 1.35; }
+.intro > p:not(.eyebrow) { max-width: 46rem; margin: 1.1rem 0 0; color: #b8c8bf; font-size: clamp(.94rem, 1.2vw, 1.08rem); line-height: 2; }
+.jumpNav { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
+.jumpNav a {
+  border: 1px solid rgb(141 197 172 / 23%);
+  border-radius: 999px;
+  padding: .55rem .9rem;
+  background: rgb(17 46 40 / 64%);
+  color: #d4e8dc;
+  font-size: .82rem;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+.jumpNav a:hover { border-color: rgb(141 222 184 / 54%); background: rgb(26 80 59 / 64%); }
+
+.serviceList { display: grid; gap: 1.2rem; }
+.serviceCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
+  align-items: stretch;
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+  overflow: hidden;
+  border: 1px solid rgb(151 190 183 / 17%);
+  border-radius: 22px;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  background: linear-gradient(140deg, #0d2221, #0a181b 72%);
+  scroll-margin-top: 1.25rem;
+}
+.serviceCard:nth-child(even) { background: linear-gradient(220deg, #0d2221, #0a181b 72%); }
+.serviceCopy { align-self: center; min-width: 0; padding-block: .35rem; }
+.serviceCopy h2 { margin: .45rem 0 .85rem; color: #f5faf7; font-size: clamp(1.55rem, 2.5vw, 2.2rem); font-weight: 800; line-height: 1.45; }
+.summary { margin: 0 0 .75rem; color: #d7f2e3; font-size: clamp(.97rem, 1.18vw, 1.08rem); font-weight: 700; line-height: 1.9; }
+.description { max-width: 44rem; margin: 0; color: #b6c6be; font-size: .92rem; line-height: 2; }
+.serviceCopy h3 { margin: 1.45rem 0 .7rem; color: #e8f7ec; font-size: .98rem; font-weight: 750; }
+.serviceCopy ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1rem; margin: 0; padding: 0; list-style: none; }
+.serviceCopy li { position: relative; padding-right: .9rem; color: #bdcec2; font-size: .85rem; line-height: 1.75; }
+.serviceCopy li::before { position: absolute; top: .65rem; right: 0; width: 5px; height: 5px; border-radius: 50%; background: #73d3a9; content: ""; }
+.artwork {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  border: 1px solid rgb(151 190 183 / 16%);
+  border-radius: 16px;
+  background-color: #102622;
+  background-position: center;
+  background-size: cover;
+}
+.artwork::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(7 20 20 / 12%), transparent 60%); content: ""; }
+.pageEnd { display: flex; justify-content: center; padding: clamp(2.5rem, 5vw, 4rem) 0; }
+
+@media (max-width: 850px) {
+  .serviceCard { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .artwork { min-height: 220px; grid-row: 1; }
+  .serviceCopy { grid-row: 2; }
+}
+@media (max-width: 520px) {
+  .shell { width: 91%; }
+  .topbar { min-height: 72px; }
+  .brand img { width: 28px; height: 56px; }
+  .brand strong { font-size: 1.1rem; }
+  .brand small { font-size: .48rem; }
+  .backLink { gap: .3rem; padding: .5rem .65rem; font-size: .7rem; }
+  .intro { padding-block: 2.75rem 2rem; }
+  .intro h1 { font-size: clamp(1.75rem, 7.5vw, 2.2rem); }
+  .intro > p:not(.eyebrow) { font-size: .9rem; }
+  .jumpNav { gap: .45rem; margin-top: 1.5rem; }
+  .jumpNav a { padding: .48rem .7rem; font-size: .75rem; }
+  .serviceList { gap: .9rem; }
+  .serviceCard { gap: 1rem; border-radius: 17px; padding: 1rem; }
+  .artwork { min-height: 170px; border-radius: 12px; }
+  .serviceCopy h2 { font-size: 1.5rem; }
+  .summary { font-size: .94rem; }
+  .description { font-size: .88rem; }
+  .serviceCopy ul { grid-template-columns: minmax(0, 1fr); gap: .35rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .backLink,
+  .pageEnd a,
+  .jumpNav a { transition: none; }
+}
