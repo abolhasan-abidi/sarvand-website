@@ -70,7 +70,7 @@ export default function Header() {
         </button>
 
         <a className="contact-link" href="#contact" onClick={() => setMenuOpen(false)}>
-          مشاوره رایگان <span aria-hidden="true">←</span>
+          مشاوره رایگان <span className="link-dot" aria-hidden="true" />
         </a>
 
         <nav
