@@ -890,11 +890,25 @@ a {
 .about-value {
   display: flex;
   align-items: start;
+  gap: .85rem;
   border: 1px solid rgb(144 187 172 / 13%);
   border-radius: 12px;
   padding: .8rem 1rem;
   background: rgb(255 255 255 / 2%);
 }
+.about-value-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  margin-top: .05rem;
+  border: 1px solid rgb(113 231 185 / 24%);
+  border-radius: 50%;
+  background: rgb(113 231 185 / 8%);
+  color: #8be5bf;
+}
+.about-value-icon svg { width: 15px; height: 15px; }
 .about-value h3 { margin: 0 0 .15rem; color: #eff7f2; font-size: .95rem; font-weight: 750; }
 .about-value p { margin: 0; color: #a5b8ae; font-size: .84rem; line-height: 1.8; }
 .about-link {

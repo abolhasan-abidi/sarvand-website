@@ -41,6 +41,11 @@ export default function About() {
           <div className="about-values" aria-label="رویکرد سروند">
             {values.map((value) => (
               <div className="about-value" key={value.title}>
+                <span className="about-value-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1.8 14.7 9.3 22.2 12l-7.5 2.7L12 22.2l-2.7-7.5L1.8 12l7.5-2.7L12 1.8Z" />
+                  </svg>
+                </span>
                 <div>
                   <h3>{value.title}</h3>
                   <p>{value.description}</p>
