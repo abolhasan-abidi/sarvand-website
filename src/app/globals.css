@@ -869,18 +869,10 @@ a {
 .about-value {
   display: flex;
   align-items: start;
-  gap: .95rem;
   border: 1px solid rgb(144 187 172 / 13%);
   border-radius: 12px;
   padding: .8rem 1rem;
   background: rgb(255 255 255 / 2%);
-}
-.about-value-number {
-  flex: 0 0 auto;
-  padding-top: .12rem;
-  color: #75d6ae;
-  font-size: .8rem;
-  font-weight: 800;
 }
 .about-value h3 { margin: 0 0 .15rem; color: #eff7f2; font-size: .95rem; font-weight: 750; }
 .about-value p { margin: 0; color: #a5b8ae; font-size: .84rem; line-height: 1.8; }

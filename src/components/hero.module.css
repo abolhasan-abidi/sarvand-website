@@ -107,7 +107,7 @@
   .copy { text-align: right; }
   .visual { min-height: 250px; margin-top: .3rem; }
   .hologram { width: min(100%, 400px); }
-  .holoCard { width: 48%; min-width: 0; max-width: 175px; gap: .4rem; padding: .45rem; }
+  .holoCard { width: 48%; min-width: 0; max-width: 175px; gap: .4rem; padding: .45rem; transform: scale(.95); }
   .holoCard strong { font-size: .61rem; }
   .holoCard small { white-space: normal; font-size: .56rem; line-height: 1.4; }
   .holoCardMark, .holoCodeMark { width: 27px; height: 27px; }

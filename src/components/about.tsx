@@ -2,17 +2,14 @@ import Image from "next/image";
 
 const values = [
   {
-    number: "۰۱",
     title: "گوش می‌دهیم",
     description: "از دغدغه‌ها و هدف‌های شما شروع می‌کنیم تا مسئله را دقیق بشناسیم.",
   },
   {
-    number: "۰۲",
     title: "راه‌حل پیشنهاد می‌دهیم",
     description: "ایده‌ها را به راهکارهای روشن و متناسب با کسب‌وکار شما تبدیل می‌کنیم.",
   },
   {
-    number: "۰۳",
     title: "اجرا می‌کنیم",
     description: "راهکار انتخاب‌شده را طراحی و پیاده‌سازی می‌کنیم تا مسئله برطرف شود.",
   },
@@ -43,8 +40,7 @@ export default function About() {
 
           <div className="about-values" aria-label="رویکرد سروند">
             {values.map((value) => (
-              <div className="about-value" key={value.number}>
-                <span className="about-value-number" aria-hidden="true">{value.number}</span>
+              <div className="about-value" key={value.title}>
                 <div>
                   <h3>{value.title}</h3>
                   <p>{value.description}</p>
