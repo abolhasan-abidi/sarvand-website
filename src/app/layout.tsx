@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Vazirmatn } from "next/font/google";
+import ScrollReveal from "@/components/scroll-reveal";
 import "./globals.css";
+
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic"],
+  display: "swap",
+  variable: "--font-vazirmatn",
+});
 
 export const metadata: Metadata = {
   title: "سروَند | توسعه نرم‌افزار و هوش مصنوعی",
@@ -8,8 +16,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body>{children}</body>
+    <html lang="fa" dir="rtl" className={vazirmatn.variable}>
+      <body>
+        <ScrollReveal />
+        {children}
+      </body>
     </html>
   );
 }

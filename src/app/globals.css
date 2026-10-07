@@ -15,14 +15,36 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
   background: #071114;
+}
+
+html.scroll-reveal-enabled .scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms ease var(--scroll-reveal-delay, 0ms),
+    transform 600ms cubic-bezier(.2, .7, .2, 1) var(--scroll-reveal-delay, 0ms);
+}
+
+html.scroll-reveal-enabled .scroll-reveal.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.scroll-reveal-enabled .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 body {
   margin: 0;
   background: #071114;
   color: var(--ink);
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: var(--font-vazirmatn), Tahoma, Arial, sans-serif;
 }
 
 a {
@@ -30,8 +52,20 @@ a {
   text-decoration: none;
 }
 
+.link-dot {
+  display: inline-block;
+  width: 0.38rem;
+  height: 0.38rem;
+  flex: 0 0 0.38rem;
+  border-radius: 50%;
+  background: #8bf0c9;
+  box-shadow: 0 0 8px rgb(139 240 201 / 45%);
+}
+
 .site-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 2%;
   z-index: 10;
   width: 96%;
   margin-inline: auto;
@@ -147,16 +181,11 @@ a {
   transition: filter 180ms ease, transform 180ms ease;
 }
 
-.contact-link span {
+.contact-link .link-dot {
   display: inline-flex;
-  width: 34px;
-  height: 34px;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgb(123 239 194 / 32%);
-  font-size: 1rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  flex: 0 0 0.38rem;
 }
 
 .contact-link:hover {
@@ -301,10 +330,6 @@ a {
     font-size: 0.72rem;
   }
 
-  .contact-link span {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 @media (max-width: 720px) and (prefers-reduced-motion: reduce) {
@@ -335,10 +360,6 @@ a {
     font-size: 0.68rem;
   }
 
-  .contact-link span {
-    width: 27px;
-    height: 27px;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -598,7 +619,7 @@ a {
   text-decoration: none;
   transition: color 180ms ease, gap 180ms ease;
 }
-.service-more span { font-size: 1.05rem; line-height: 1; }
+.service-more .link-dot { width: .34rem; height: .34rem; flex-basis: .34rem; }
 .service-more:hover { gap: .75rem; color: #c0ffe4; }
 .service-more:focus-visible { outline: 2px solid #8bf0c9; outline-offset: 4px; border-radius: 3px; }
 @media (max-width: 640px) {
@@ -900,7 +921,7 @@ a {
 }
 .about-link:hover { border-color: rgb(113 231 185 / 62%); background: rgb(24 91 66 / 58%); }
 .about-link:focus-visible { outline: 2px solid #8be5bf; outline-offset: 4px; }
-.about-link span { font-size: 1.1rem; line-height: 1; }
+.about-link .link-dot { width: .38rem; height: .38rem; flex-basis: .38rem; }
 .about-visual {
   position: relative;
   display: grid;
