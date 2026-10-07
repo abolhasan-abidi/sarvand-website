@@ -2,8 +2,8 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  margin-top: 0;
-  padding-top: 5.75rem;
+  margin-top: -5.25rem;
+  padding-top: 5.25rem;
   background: #071114;
   color: #f7f8f7;
 }
@@ -92,7 +92,7 @@
 }
 
 @media (max-width: 900px) {
-  .hero { margin-top: 0; padding-top: 5.75rem; }
+  .hero { margin-top: -4.5rem; padding-top: 4.5rem; }
   .mainRow { min-height: 0; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; gap: .4rem; }
   .copy { grid-column: 1; grid-row: 1; width: 100%; max-width: 680px; justify-self: stretch; }
   .visual { grid-column: 1; grid-row: 2; min-height: 320px; }
@@ -101,7 +101,7 @@
 }
 
 @media (max-width: 600px) {
-  .hero { margin-top: 0; padding-top: 4.5rem; }
+  .hero { margin-top: -4rem; padding-top: 4rem; }
   .inner { width: 92%; padding-block: 1.25rem 1rem; }
   .mainRow { gap: 0; }
   .copy { text-align: right; }
@@ -110,8 +110,6 @@
   .holoCard { width: 48%; min-width: 0; max-width: 175px; gap: .4rem; padding: .45rem; }
   .holoCard strong { font-size: .61rem; }
   .holoCard small { white-space: normal; font-size: .56rem; line-height: 1.4; }
-  .holoCardTop strong, .holoCardUpperLeft strong { font-size: .56rem; }
-  .holoCardTop small, .holoCardUpperLeft small { font-size: .51rem; }
   .holoCardMark, .holoCodeMark { width: 27px; height: 27px; }
   .holoBars { gap: 2px; padding-inline: 2px; }
   .holoCardTop { top: 9%; right: -1%; }

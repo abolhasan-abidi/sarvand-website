@@ -54,7 +54,7 @@ export default function About() {
           </div>
 
           <a className="about-link" href="#contact">
-            مشاوره رایگان <span className="link-dot" aria-hidden="true" />
+            مشاوره رایگان <span aria-hidden="true">←</span>
           </a>
         </div>
 

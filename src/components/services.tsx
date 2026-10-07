@@ -201,7 +201,7 @@ function Services() {
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
                 <a className="service-more" href={`/services#${service.id}`} tabIndex={index >= services.length ? -1 : undefined} aria-label={`اطلاعات بیشتر درباره ${service.title}`}>
-                  اطلاعات بیشتر <span className="link-dot" aria-hidden="true" />
+                  اطلاعات بیشتر <span aria-hidden="true">←</span>
                 </a>
               </article>
             ))}

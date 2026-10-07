@@ -93,7 +93,7 @@ export default function Hero() {
               سروند با تکیه بر تخصص در توسعه نرم‌افزار، هوش مصنوعی و طراحی محصولات دیجیتال، راهکارهایی مقیاس‌پذیر، امن و نتیجه‌محور برای رشد و تحول کسب‌وکارهای شما ارائه می‌دهد.
             </p>
             <div className={styles.actions}>
-              <a className={styles.primaryAction} href="#services">مشاهده خدمات <span className="link-dot" aria-hidden="true" /></a>
+              <a className={styles.primaryAction} href="#services">مشاهده خدمات <span aria-hidden="true">←</span></a>
             </div>
           </div>
           <div className={styles.visual}>
